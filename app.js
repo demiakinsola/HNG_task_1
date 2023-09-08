@@ -18,8 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // const currentDay = moment().utcOffset(0).format('YYYY-MM-DDTHH:mm:ssZ');
 // console.log(currentDay);
 
-//get the current date
-const currentDate = moment().utcOffset(0).format();
+
 // const DATE = new Date();
 // const date = new Date().toISOString();
 // console.log(DATE);
@@ -30,8 +29,7 @@ const currentDate = moment().utcOffset(0).format();
 // console.log(moment().format())
 // console.log(moment().tz('UTC').format('YYYY-MM-DDTHH:mm:ss[Z]'))
 
-// //get the present day
-const presentDay = moment().utc().format("dddd");
+
 // const days = [
 //   "Sunday",
 //   "Monday",
@@ -46,6 +44,10 @@ const presentDay = moment().utc().format("dddd");
 // console.log(presentDay);
 
 app.get("/api", (req, res) => {
+  //get the current date
+  const currentDate = moment().utcOffset(0).format();
+  // //get the present day
+  const presentDay = moment().utc().format("dddd");
   const { slack_name, track } = req.query;
   res.json({
     slack_name: slack_name,
