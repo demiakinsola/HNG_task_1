@@ -52,8 +52,9 @@ app.get("/api", (req, res) => {
     current_day: presentDay,
     utc_time: currentDate,
     track: track,
-    github_file_url: "",
-    github_repo_url: "",
+    github_file_url:
+      "https://github.com/demiakinsola/HNG_task_1/blob/main/app.js",
+    github_repo_url: "https://github.com/demiakinsola/HNG_task_1",
     status_code: 200,
   });
 });
